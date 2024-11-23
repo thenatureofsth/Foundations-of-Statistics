@@ -1,0 +1,25 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Foundations of Statistics"
+  author: "Sensei"
+  date: "11/23/2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: katex
+  pdf:
+   documentclass: scrreprt
+
+editor: visual
+
