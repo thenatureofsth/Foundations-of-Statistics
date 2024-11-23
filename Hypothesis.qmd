@@ -1,0 +1,73 @@
+# Hypothesis Testing
+
+X: the number of heads when we toss a coin 10 times
+
+$H_0$:  $X\sim$ Binomial (n=10,p=0.5)  (If the coin is fair) 
+
+We observe $X=9$, and get p-value 0.021
+
+## P-value
+
+ p-value is the probability of observing something at least as extreme as our observation, if the null hypothesis is true.
+
+For example, in the above example, we calculate the p-value of 0.021 as a measure of the strength of evidence against the hypothesis that $p=0.5$ (fair coin).
+
+
+## P-value Interpretation
+
+p-value =0.021
+
+We have some evidence that $p\neq 0.5$ (the coin is not fair) 
+
+it only tells us that in our sample, we have evidence that $p$ is different from 0.5
+
+but it does not mean the difference between true $p$ and 0.5 is large, or the difference between true $p$ and 0.5 is important in practical terms. 
+
+So what we get is “ Substantial evidence of a difference”, not “Evidence of a substantial difference”.
+
+Most people agree that p-value is a useful measure of the strength of evidence against the null hypothesis.
+
+The smaller the p-value, the stronger the evidence against the null hypothesis.
+
+As a rule of thumb, we consider the p-values of 0.05 and less start to suggest that the null hypothesis is doubtful.
+
+## Statistical Significance
+
+The result of a hypothesis test is significant at the 5% level if the p-value is less than 0.05.
+
+The chance of seeing what we did see (9 heads out of 10 tosses), or more, is less than 5% if the null hypothesis is true.
+
+Note that 5% of the time, we will get a p-value <0.05 when the null hypothesis is TRUE!
+
+A small p-value does Not mean that the null hypothesis is definitely wrong.
+
+## Hypothesis testing Example
+
+$$
+\begin{aligned}
+H_0: &\mu=\mu_0 \\
+H_1:&\mu\neq\mu_0
+\end{aligned}
+$$
+
+## Z-test vs T-test
+
+when sample size is large and population variance $\sigma^2$ is known,
+
+$$
+Z=\frac{\bar{X}-E[\bar{X}]}{\text{sd}(\bar{X})}=\frac{(\bar{X}-\mu)}{\sigma/\sqrt{n}}\sim \text{Normal}(0,1)
+$$
+
+When sample size is small and population variance $\sigma^2$ is unknown, we use the sample variance $s^2$ instead
+
+The t-test is parametrized by the degrees of freedom, which refers to the number of independent observations in a dataset, denoted by $\nu=n-1$
+
+$$
+T=\frac{\bar{X}-E[\bar{X}]}{\text{se}(\bar{X})}=\frac{\bar{X}-\mu}{s/\sqrt{n}}\sim \text{Student}(df={n-1}), 
+$$
+
+where $s^2 =\frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n-1}$.
+
+The additional variability of T is reflected in its distribution being flatter and having longer tails than the standard Normal.
+
+T-distribution is similar to the normal distribution in appearance but has larger tails. This means that extreme events happen with greater frequency than the modeled distribution would predict.

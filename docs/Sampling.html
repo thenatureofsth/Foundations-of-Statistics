@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Summary – Foundations of Statistics</title>
+<title>1&nbsp; Sampling – Foundations of Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,8 +50,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./intro.html" rel="prev">
+<link href="./Confidence.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -103,6 +89,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -115,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./summary.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Sampling.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Sampling</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -148,14 +163,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  <a href="./Sampling.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Sampling</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./Confidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Confidernce Interval</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Hypothesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Upcoming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Upcoming Content</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -169,15 +196,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link active" data-scroll-target="#descriptive-statistics"><span class="header-section-number">1.1</span> Descriptive Statistics</a></li>
+  <li><a href="#confidence-interval" id="toc-confidence-interval" class="nav-link" data-scroll-target="#confidence-interval"><span class="header-section-number">1.2</span> Confidence interval</a></li>
+  <li><a href="#randomisation" id="toc-randomisation" class="nav-link" data-scroll-target="#randomisation"><span class="header-section-number">1.3</span> Randomisation</a></li>
+  <li><a href="#central-limit-theorem-clt" id="toc-central-limit-theorem-clt" class="nav-link" data-scroll-target="#central-limit-theorem-clt"><span class="header-section-number">1.4</span> Central limit theorem (CLT)</a></li>
+  <li><a href="#bias" id="toc-bias" class="nav-link" data-scroll-target="#bias"><span class="header-section-number">1.5</span> Bias</a></li>
+  <li><a href="#precision" id="toc-precision" class="nav-link" data-scroll-target="#precision"><span class="header-section-number">1.6</span> Precision</a>
+  <ul class="collapse">
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy"><span class="header-section-number">1.6.1</span> Accuracy</a></li>
+  <li><a href="#sample-proportion" id="toc-sample-proportion" class="nav-link" data-scroll-target="#sample-proportion"><span class="header-section-number">1.6.2</span> Sample proportion</a></li>
+  <li><a href="#standard-error-for-a-difference-between-independent-estimates" id="toc-standard-error-for-a-difference-between-independent-estimates" class="nav-link" data-scroll-target="#standard-error-for-a-difference-between-independent-estimates"><span class="header-section-number">1.6.3</span> Standard error for a difference between independent estimates</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Sampling</span></h1>
 </div>
 
 
@@ -194,15 +237,196 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In summary, this book has no content whatsoever.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<p><span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span></p>
+<section id="descriptive-statistics" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="descriptive-statistics"><span class="header-section-number">1.1</span> Descriptive Statistics</h2>
+<p>population deviation</p>
+<p><span class="math display">\[
+\sigma=\sqrt{\frac{\sum_{i=1}^N (X_i-\mu)^2}{N}}
+\]</span></p>
+<p>standard deviation of a sample</p>
+<p><span class="math display">\[
+s=\sqrt{\frac{\sum_{i=1}^n (X_i-\mu)^2}{n-1}}
+\]</span></p>
+<p>is descriptive statistics, which is a description of the variation in measurements. However, the standard error of the mean is descriptive of the random sampling process, which is a probabilistic statement about how the sample size will provide a better bound on estimates of the population mean, in light of the central limit theorem.</p>
+<p>For a sample of size <span class="math inline">\(n\)</span>,</p>
+<p>standard deviation of the sample mean</p>
+<p><span class="math display">\[
+s.d(\bar{X}) = \frac{\sigma}{\sqrt{n}}
+\]</span></p>
+<p>but since <span class="math inline">\(\sigma\)</span> is unknow, we use standard error of the sample mean</p>
+<p><span class="math display">\[
+s.e(\bar{X})=\frac{s}{\sqrt{n}}
+\]</span></p>
+<p>Put simply, the <strong>standard error</strong> of the sample mean is an estimate of how far the sample mean is likely to be from the population mean, whereas the <strong>standard deviation</strong> of the sample is the degree to which individuals within the sample differ from the sample mean.<sup><a href="https://en.wikipedia.org/wiki/Standard_error#cite_note-9">[9]</a></sup> If the population standard deviation is finite, the standard error of the mean of the sample will tend to zero (<span class="math inline">\(s.e\to 0\)</span> )with increasing sample size, because the estimate of the population mean will improve, while the standard deviation of the sample <span class="math inline">\(s\)</span> will tend to approximate the population standard deviation <span class="math inline">\(\sigma\)</span> as the sample size increases.</p>
+</section>
+<section id="confidence-interval" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="confidence-interval"><span class="header-section-number">1.2</span> Confidence interval</h2>
+<p>Suppose <span class="math inline">\(X_1,...,X_n\)</span> is an independent sample from a population <span class="math inline">\(Normal(\mu,\sigma^2)\)</span>.</p>
+<p>Sample mean</p>
+<p><span class="math display">\[
+\bar{X} = \frac{X_1+...+X_n}{n}
+\]</span></p>
+<p>Sample variance</p>
+<p><span class="math display">\[
+s^2=\frac{1}{n-1}\sum_{i=1}^n (X_i-\bar{X})^2
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+T=\frac{\bar{X}-\mu}{\frac{S}{\sqrt{n}}}=\frac{\bar{X}-\mu}{s.e}
+\]</span></p>
+<p>s.e is the standard error of the sample mean</p>
+</section>
+<section id="randomisation" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="randomisation"><span class="header-section-number">1.3</span> Randomisation</h2>
+<p>How can we use sampled data to inform us about the population from which the data are drawn?</p>
+<p>Suppose that <span class="math inline">\(X_1,X_2,...,X_n\)</span> represent a random sample from a distribution with mean <span class="math inline">\(\mu\)</span> , then</p>
+<p><span class="math display">\[
+E[X_1+X_2+...+X_n]=E[X_1]+E[X_2]+...+E[X_n]=n\mu.
+\]</span></p>
+<p>Since <span class="math inline">\(X_1,X_2,...,X_n\)</span> are independent (hence uncorrelated), we have</p>
+<p><span class="math display">\[
+\text{Var}(X_1+X_2+...+X_n)=\text{Var}(X_1)+\text{Var}(X_2)+...+\text{Var}(X_n)=n\sigma^2
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{sd}(X_1+X_2+...+X_n)&amp;=\sqrt{\text{Var}(X_1+X_2+...+X_n)}\\
+&amp;=\sqrt{\text{Var}(X_1)+\text{Var}(X_2)+...+\text{Var}(X_n)}\\
+&amp;=\sqrt{n\sigma^2}=\sqrt{n} \sigma
+\end{aligned}
+\]</span></p>
+<p>We now have the mean and standard deviation of the sample mean <span class="math inline">\(\bar{X}\)</span></p>
+<p><span class="math display">\[E[\bar{X}]=E\left[\frac{\sum X_i}{n}\right]=\frac{1}{n} n\mu=\mu\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{sd}(\bar{X})&amp;=\text{sd}\left(\frac{\sum X_i}{n}\right)=\sqrt{\text{Var}\left(\frac{\sum X_i}{n}\right)}\\
+&amp;=\sqrt{\frac{1}{n^2}\text{Var}(\sum X_i)}\\
+&amp;=\sqrt{\frac{1}{n^2}n\sigma^2}\\
+&amp;=\frac{\sigma}{\sqrt{n}}
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the population mean and <span class="math inline">\(\sigma\)</span> is the population standard deviation.</p>
+<p>population standard deviation</p>
+<p><span class="math display">\[
+\sigma=\sqrt{\text{Var}(X)}=\sqrt{\frac{\sum_{i=1}^n(X_i-\mu)^2}{n}}
+\]</span></p>
+<p>sample standard deviation</p>
+<p><span class="math display">\[
+s=\sqrt{\frac{\sum_{i=1}^N (X_i-\mu)^2}{N-1}}
+\]</span></p>
+<p>However, in practice nobody knows <span class="math inline">\(\sigma\)</span>. So we use standard error</p>
+<p><span class="math display">\[
+\text{se}(\bar{x})=\frac{s_x}{\sqrt{n}},
+\]</span></p>
+<p>where <span class="math inline">\(s_x\)</span> is the sample standard deviation.</p>
+<p>Note that here we use <span class="math inline">\(\text{se}(\bar{x})\)</span> to indicate it is a fixed value for a particular sample. The corresponding random variable will be denoted by <span class="math inline">\(\text{se}(\bar{X})\)</span>.</p>
+<p>The sampling distribution of the sample mean is <span class="math inline">\(\bar{X}\sim \text{Normal}(\mu_{\bar{X}}=\mu,\sigma_{\bar{X}}=\sigma/\sqrt{n})\)</span>. Thus, in the long run, the observed sample mean falls within <span class="math inline">\(\pm 2 \text{sd}(\bar{X})\)</span> of the population mean <span class="math inline">\(\mu\)</span> for approximately 95% of samples taken.</p>
+<p>As the sample size <span class="math inline">\(n\)</span> increases (the number of random samples), the estimate <span class="math inline">\(\bar{X}\)</span> becomes more precise because <span class="math inline">\(\text{sd}(\bar{X})\)</span> becomes smaller.</p>
+<p><span class="math display">\[
+Z=\frac{\bar{X}-E[\bar{X}]}{\text{sd}(\bar{X})}=\frac{(\bar{X}-\mu)}{\sigma/\sqrt{n}}\sim \text{Normal}(0,1)
+\]</span></p>
+</section>
+<section id="central-limit-theorem-clt" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="central-limit-theorem-clt"><span class="header-section-number">1.4</span> Central limit theorem (CLT)</h2>
+<p><span class="math display">\[
+\sqrt{n}(\bar{X}-u)\sim\text{Normal}(0,\sigma^2)
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>If you repeatedly sample a random variable a large number of times, the distribution of the sample mean will approach a normal distribution regardless of the initial distribution of the random variable.</p>
+<p>The sample mean <span class="math inline">\(\bar{X}\)</span> is approximately Normally distributed in large samples.</p>
+<p>Heaviness of the tails of the distribution and lack of symmetry are important factors in slowing down the CLT effect.</p>
+<p>Diagnostic: one should always plot the sample data. If the data look as though they may have come from a distribution that isn’t extremely non-normal, we can feel much more confident about calculations based on a Normal approximation with moderate-sized samples.</p>
+</div>
+</div>
+<p>Why this is useful? Because in practice we never know the exact form of the distribution we are sampling from (e.g., can be exponential, trangular, uniform…), but CLT tells us we can apply normal-distribution theory for means from large samples even when the original distribution is not Normal.</p>
+<p>sample size for CLT to work: it depends. If a distribution is close in shape to the Normal, the CLT works fast (e.g, 4-12). For an exponential distribution, it requires 30-50 (depends on the degree of skewness).</p>
+</section>
+<section id="bias" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="bias"><span class="header-section-number">1.5</span> Bias</h2>
+<p>bias= <span class="math inline">\(E(\hat{\Theta})-\theta\)</span></p>
+</section>
+<section id="precision" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="precision"><span class="header-section-number">1.6</span> Precision</h2>
+<p>The precision of the estimate is a measure of how variable the estimator is in repeated sampling.</p>
+<p>A precise estimate is one that is subject to very little sampling variation.</p>
+<p>measure of precision: standard deviation of the sampling distribution of the estimator <span class="math inline">\(\text{sd}(\hat{\Theta})\)</span></p>
+<p>However, the actual standard deviation of the sampling distribution is unknown. So we use an estimate of the actual standard deviation - standard error <span class="math inline">\(\text{se}(\hat{\theta})\)</span> as the measure of the precision of our estimate.</p>
+<p>Smaller standard errors correspond to more precise estimates.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Precision
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The standard error of any estimate <span class="math inline">\(\hat{\theta}\)</span></p>
+<p><span class="math inline">\(\text{se}(\hat{\theta})\)</span> estimates the variability of <span class="math inline">\(\hat{\theta}\)</span> values in repeated sampling</p>
+<p>it is a measure of precision of <span class="math inline">\(\hat{\theta}\)</span> .</p>
+</div>
+</div>
+<p>Note:</p>
+<ul>
+<li><p>An estimate can be biased but precise.</p></li>
+<li><p>An estimate can be precise but biased</p></li>
+</ul>
+<section id="accuracy" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">1.6.1</span> Accuracy</h3>
+<p>An accurate estimator is one that generally gives estimates that are close to the parameter estimated so that it will have low bias and high precision.</p>
+</section>
+<section id="sample-proportion" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="sample-proportion"><span class="header-section-number">1.6.2</span> Sample proportion</h3>
+<p>The sample proportion <span class="math inline">\(\hat{p}\)</span> estimates the population proportion <span class="math inline">\(p\)</span>.</p>
+<p>The number of people reported having seen illegal drugs <span class="math inline">\(Y\sim \text{Binomial}(n,p)\)</span>. We have</p>
+<p><span class="math display">\[
+E[Y]=np, \text{Var}(Y)=np(1-p)
+\]</span></p>
+<p>The sample proportion random variable <span class="math inline">\(\hat{P}=Y/n\)</span>.</p>
+<p><span class="math display">\[
+E[\hat{P}]=E[Y/n]=\frac{1}{n}E[Y]=p, \\
+\text{sd}(\hat{P})=\sqrt{\text{Var}(\hat{P})}=\sqrt{\text{Var}(Y/n)}=\sqrt{\frac{1}{n^2} np(1-p)}=\sqrt{\frac{p(1-p)}{n}}
+\]</span></p>
+<p>By CLT, we have <span class="math inline">\(\hat{P}\sim \text{Normal}(E[\hat{P}], \text{sd}(\hat{P})^2)\)</span>.</p>
+<p>However, in reality, we wouldn’t know the population proportion <span class="math inline">\(p\)</span>, so we want to use a sample proportion <span class="math inline">\(\hat{p}\)</span> to estimate this unknown <span class="math inline">\(p\)</span>. Thus, we use standard error</p>
+<p><span class="math display">\[
+\text{se}(\hat{p})=\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+\]</span></p>
+</section>
+<section id="standard-error-for-a-difference-between-independent-estimates" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="standard-error-for-a-difference-between-independent-estimates"><span class="header-section-number">1.6.3</span> Standard error for a difference between independent estimates</h3>
+<p><span class="math display">\[
+\text{se}(\hat{\theta_1}-\hat{\theta_2})=\sqrt{\text{se}(\hat{\theta_1})^2+\text{se}(\hat{\theta_2})^2}
+\]</span></p>
+<p><span class="math display">\[
+\text{se}(\hat{p_1}-\hat{p_2})=\sqrt{\text{se}(\hat{p_1})^2+\text{se}(\hat{p_2})^2}=\text{se}(\hat{p})=\sqrt{\frac{\hat{p_1}(1-\hat{p_1})}{n_1}+\frac{\hat{p_2}(1-\hat{p_2})}{n_2}}\]</span> <span class="math display">\[
+\begin{aligned}
+H_0: &amp; \hat{p}=p_0 \\
+H_1:&amp;\hat{p} \neq p_0
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+Z=\frac{\hat{p}-p_0}{\text{sd}(\hat{p})}=\frac{\hat{p}-p_0}{\sigma/\sqrt{n}}\sim \text{Normal}(0,1)
+\]</span></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-knuth84" class="csl-entry" role="listitem">
+Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -627,13 +851,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Confidence.html" class="pagination-link" aria-label="Confidernce Interval">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Confidernce Interval</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

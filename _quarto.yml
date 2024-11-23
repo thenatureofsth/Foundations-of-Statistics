@@ -8,7 +8,9 @@ book:
   date: "today"
   chapters:
     - index.qmd
-    - Basics.qmd
+    - Sampling.qmd
+    - Confidence.qmd
+    - Hypothesis.qmd
     - Upcoming.qmd
     - references.qmd
 
@@ -24,4 +26,3 @@ format:
    documentclass: scrreprt
 
 editor: visual
-

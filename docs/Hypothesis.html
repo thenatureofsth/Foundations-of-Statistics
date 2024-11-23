@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction – Foundations of Statistics</title>
+<title>3&nbsp; Hypothesis Testing – Foundations of Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./Upcoming.html" rel="next">
+<link href="./Confidence.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -89,22 +69,8 @@ div.csl-indent {
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -144,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Hypothesis.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,14 +143,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  <a href="./Sampling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Sampling</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./Confidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Confidernce Interval</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Hypothesis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Upcoming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Upcoming Content</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -203,10 +181,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link active" data-scroll-target="#descriptive-statistics"><span class="header-section-number">2</span> Descriptive Statistics</a>
-  <ul class="collapse">
-  <li><a href="#confidence-interval" id="toc-confidence-interval" class="nav-link" data-scroll-target="#confidence-interval"><span class="header-section-number">2.1</span> Confidence interval</a></li>
-  </ul></li>
+  <li><a href="#p-value" id="toc-p-value" class="nav-link active" data-scroll-target="#p-value"><span class="header-section-number">3.1</span> P-value</a></li>
+  <li><a href="#p-value-interpretation" id="toc-p-value-interpretation" class="nav-link" data-scroll-target="#p-value-interpretation"><span class="header-section-number">3.2</span> P-value Interpretation</a></li>
+  <li><a href="#statistical-significance" id="toc-statistical-significance" class="nav-link" data-scroll-target="#statistical-significance"><span class="header-section-number">3.3</span> Statistical Significance</a></li>
+  <li><a href="#hypothesis-testing-example" id="toc-hypothesis-testing-example" class="nav-link" data-scroll-target="#hypothesis-testing-example"><span class="header-section-number">3.4</span> Hypothesis testing Example</a></li>
+  <li><a href="#z-test-vs-t-test" id="toc-z-test-vs-t-test" class="nav-link" data-scroll-target="#z-test-vs-t-test"><span class="header-section-number">3.5</span> Z-test vs T-test</a></li>
   </ul>
 </nav>
     </div>
@@ -215,7 +194,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></h1>
 </div>
 
 
@@ -232,53 +211,57 @@ window.Quarto = {
 </header>
 
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
-<section id="descriptive-statistics" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Descriptive Statistics</h1>
-<p>population deviation</p>
-<p><span class="math display">
-\sigma=\sqrt{\frac{\sum_{i=1}^N (X_i-\mu)^2}{N}}
-</span></p>
-<p>standard deviation of a sample</p>
-<p><span class="math display">
-s=\sqrt{\frac{\sum_{i=1}^n (X_i-\mu)^2}{n-1}}
-</span></p>
-<p>is descriptive statistics, which is a description of the variation in measurements. However, the standard error of the mean is descriptive of the random sampling process, which is a probabilistic statement about how the sample size will provide a better bound on estimates of the population mean, in light of the central limit theorem.</p>
-<p>For a sample of size <span class="math inline">n</span>,</p>
-<p>standard deviation of the sample mean</p>
-<p><span class="math display">
-s.d(\bar{X}) = \frac{\sigma}{\sqrt{n}}
-</span></p>
-<p>but since <span class="math inline">\sigma</span> is unknow, we use standard error of the sample mean</p>
-<p><span class="math display">
-s.e(\bar{X})=\frac{s}{\sqrt{n}}
-</span></p>
-<p>Put simply, the <strong>standard error</strong> of the sample mean is an estimate of how far the sample mean is likely to be from the population mean, whereas the <strong>standard deviation</strong> of the sample is the degree to which individuals within the sample differ from the sample mean.<sup><a href="https://en.wikipedia.org/wiki/Standard_error#cite_note-9">[9]</a></sup> If the population standard deviation is finite, the standard error of the mean of the sample will tend to zero (<span class="math inline">s.e\to 0</span> )with increasing sample size, because the estimate of the population mean will improve, while the standard deviation of the sample <span class="math inline">s</span> will tend to approximate the population standard deviation <span class="math inline">\sigma</span> as the sample size increases.</p>
-<section id="confidence-interval" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="confidence-interval"><span class="header-section-number">2.1</span> Confidence interval</h2>
-<p>Suppose <span class="math inline">X_1,...,X_n</span> is an independent sample from a population <span class="math inline">Normal(\mu,\sigma^2)</span>.</p>
-<p>Sample mean</p>
-<p><span class="math display">
-\bar{X} = \frac{X_1+...+X_n}{n}
-</span></p>
-<p>Sample variance</p>
-<p><span class="math display">
-s^2=\frac{1}{n-1}\sum_{i=1}^n (X_i-\bar{X})^2
-</span></p>
-<p>Then</p>
-<p><span class="math display">
-T=\frac{\bar{X}-\mu}{\frac{S}{\sqrt{n}}}=\frac{\bar{X}-\mu}{s.e}
-</span></p>
-<p>s.e is the standard error of the sample mean</p>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
-</div>
+<p>X: the number of heads when we toss a coin 10 times</p>
+<p><span class="math inline">\(H_0\)</span>: <span class="math inline">\(X\sim\)</span> Binomial (n=10,p=0.5) (If the coin is fair)</p>
+<p>We observe <span class="math inline">\(X=9\)</span>, and get p-value 0.021</p>
+<section id="p-value" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="p-value"><span class="header-section-number">3.1</span> P-value</h2>
+<p>p-value is the probability of observing something at least as extreme as our observation, if the null hypothesis is true.</p>
+<p>For example, in the above example, we calculate the p-value of 0.021 as a measure of the strength of evidence against the hypothesis that <span class="math inline">\(p=0.5\)</span> (fair coin).</p>
 </section>
+<section id="p-value-interpretation" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="p-value-interpretation"><span class="header-section-number">3.2</span> P-value Interpretation</h2>
+<p>p-value =0.021</p>
+<p>We have some evidence that <span class="math inline">\(p\neq 0.5\)</span> (the coin is not fair)</p>
+<p>it only tells us that in our sample, we have evidence that <span class="math inline">\(p\)</span> is different from 0.5</p>
+<p>but it does not mean the difference between true <span class="math inline">\(p\)</span> and 0.5 is large, or the difference between true <span class="math inline">\(p\)</span> and 0.5 is important in practical terms.</p>
+<p>So what we get is “ Substantial evidence of a difference”, not “Evidence of a substantial difference”.</p>
+<p>Most people agree that p-value is a useful measure of the strength of evidence against the null hypothesis.</p>
+<p>The smaller the p-value, the stronger the evidence against the null hypothesis.</p>
+<p>As a rule of thumb, we consider the p-values of 0.05 and less start to suggest that the null hypothesis is doubtful.</p>
+</section>
+<section id="statistical-significance" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="statistical-significance"><span class="header-section-number">3.3</span> Statistical Significance</h2>
+<p>The result of a hypothesis test is significant at the 5% level if the p-value is less than 0.05.</p>
+<p>The chance of seeing what we did see (9 heads out of 10 tosses), or more, is less than 5% if the null hypothesis is true.</p>
+<p>Note that 5% of the time, we will get a p-value &lt;0.05 when the null hypothesis is TRUE!</p>
+<p>A small p-value does Not mean that the null hypothesis is definitely wrong.</p>
+</section>
+<section id="hypothesis-testing-example" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="hypothesis-testing-example"><span class="header-section-number">3.4</span> Hypothesis testing Example</h2>
+<p><span class="math display">\[
+\begin{aligned}
+H_0: &amp;\mu=\mu_0 \\
+H_1:&amp;\mu\neq\mu_0
+\end{aligned}
+\]</span></p>
+</section>
+<section id="z-test-vs-t-test" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="z-test-vs-t-test"><span class="header-section-number">3.5</span> Z-test vs T-test</h2>
+<p>when sample size is large and population variance <span class="math inline">\(\sigma^2\)</span> is known,</p>
+<p><span class="math display">\[
+Z=\frac{\bar{X}-E[\bar{X}]}{\text{sd}(\bar{X})}=\frac{(\bar{X}-\mu)}{\sigma/\sqrt{n}}\sim \text{Normal}(0,1)
+\]</span></p>
+<p>When sample size is small and population variance <span class="math inline">\(\sigma^2\)</span> is unknown, we use the sample variance <span class="math inline">\(s^2\)</span> instead</p>
+<p>The t-test is parametrized by the degrees of freedom, which refers to the number of independent observations in a dataset, denoted by <span class="math inline">\(\nu=n-1\)</span></p>
+<p><span class="math display">\[
+T=\frac{\bar{X}-E[\bar{X}]}{\text{se}(\bar{X})}=\frac{\bar{X}-\mu}{s/\sqrt{n}}\sim \text{Student}(df={n-1}),
+\]</span></p>
+<p>where <span class="math inline">\(s^2 =\frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n-1}\)</span>.</p>
+<p>The additional variability of T is reflected in its distribution being flatter and having longer tails than the standard Normal.</p>
+<p>T-distribution is similar to the normal distribution in appearance but has larger tails. This means that extreme events happen with greater frequency than the modeled distribution would predict.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -704,13 +687,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./Confidence.html" class="pagination-link" aria-label="Confidernce Interval">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Confidernce Interval</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Upcoming.html" class="pagination-link" aria-label="Upcoming Content">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Upcoming Content</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

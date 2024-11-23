@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Upcoming.html" rel="next">
+<link href="./Hypothesis.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -149,8 +169,14 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Hypothesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Upcoming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Upcoming Content</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Upcoming Content</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -172,6 +198,14 @@ window.Quarto = {
   <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link active" data-scroll-target="#descriptive-statistics"><span class="header-section-number">1.1</span> Descriptive Statistics</a></li>
   <li><a href="#confidence-interval" id="toc-confidence-interval" class="nav-link" data-scroll-target="#confidence-interval"><span class="header-section-number">1.2</span> Confidence interval</a></li>
   <li><a href="#randomisation" id="toc-randomisation" class="nav-link" data-scroll-target="#randomisation"><span class="header-section-number">1.3</span> Randomisation</a></li>
+  <li><a href="#central-limit-theorem-clt" id="toc-central-limit-theorem-clt" class="nav-link" data-scroll-target="#central-limit-theorem-clt"><span class="header-section-number">1.4</span> Central limit theorem (CLT)</a></li>
+  <li><a href="#bias" id="toc-bias" class="nav-link" data-scroll-target="#bias"><span class="header-section-number">1.5</span> Bias</a></li>
+  <li><a href="#precision" id="toc-precision" class="nav-link" data-scroll-target="#precision"><span class="header-section-number">1.6</span> Precision</a>
+  <ul class="collapse">
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy"><span class="header-section-number">1.6.1</span> Accuracy</a></li>
+  <li><a href="#sample-proportion" id="toc-sample-proportion" class="nav-link" data-scroll-target="#sample-proportion"><span class="header-section-number">1.6.2</span> Sample proportion</a></li>
+  <li><a href="#standard-error-for-a-difference-between-independent-estimates" id="toc-standard-error-for-a-difference-between-independent-estimates" class="nav-link" data-scroll-target="#standard-error-for-a-difference-between-independent-estimates"><span class="header-section-number">1.6.3</span> Standard error for a difference between independent estimates</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -197,6 +231,7 @@ window.Quarto = {
 </header>
 
 
+<p><span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span></p>
 <section id="descriptive-statistics" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="descriptive-statistics"><span class="header-section-number">1.1</span> Descriptive Statistics</h2>
 <p>population deviation</p>
@@ -254,8 +289,137 @@ E[X_1+X_2+...+X_n]=E[X_1]+E[X_2]+...+E[X_n]=n\mu.
 &amp;=\sqrt{n\sigma^2}=\sqrt{n} \sigma
 \end{aligned}
 \]</span></p>
+<p>We now have the mean and standard deviation of the sample mean <span class="math inline">\(\bar{X}\)</span></p>
+<p><span class="math display">\[E[\bar{X}]=E\left[\frac{\sum X_i}{n}\right]=\frac{1}{n} n\mu=\mu\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{sd}(\bar{X})&amp;=\text{sd}\left(\frac{\sum X_i}{n}\right)=\sqrt{\text{Var}\left(\frac{\sum X_i}{n}\right)}\\
+&amp;=\sqrt{\frac{1}{n^2}\text{Var}(\sum X_i)}\\
+&amp;=\sqrt{\frac{1}{n^2}n\sigma^2}\\
+&amp;=\frac{\sigma}{\sqrt{n}}
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the population mean and <span class="math inline">\(\sigma\)</span> is the population standard deviation.</p>
+<p>population standard deviation</p>
+<p><span class="math display">\[
+\sigma=\sqrt{\text{Var}(X)}=\sqrt{\frac{\sum_{i=1}^n(X_i-\mu)^2}{n}}
+\]</span></p>
+<p>sample standard deviation</p>
+<p><span class="math display">\[
+s=\sqrt{\frac{\sum_{i=1}^N (X_i-\mu)^2}{N-1}}
+\]</span></p>
+<p>However, in practice nobody knows <span class="math inline">\(\sigma\)</span>. So we use standard error</p>
+<p><span class="math display">\[
+\text{se}(\bar{x})=\frac{s_x}{\sqrt{n}},
+\]</span></p>
+<p>where <span class="math inline">\(s_x\)</span> is the sample standard deviation.</p>
+<p>Note that here we use <span class="math inline">\(\text{se}(\bar{x})\)</span> to indicate it is a fixed value for a particular sample. The corresponding random variable will be denoted by <span class="math inline">\(\text{se}(\bar{X})\)</span>.</p>
+<p>The sampling distribution of the sample mean is <span class="math inline">\(\bar{X}\sim \text{Normal}(\mu_{\bar{X}}=\mu,\sigma_{\bar{X}}=\sigma/\sqrt{n})\)</span>. Thus, in the long run, the observed sample mean falls within <span class="math inline">\(\pm 2 \text{sd}(\bar{X})\)</span> of the population mean <span class="math inline">\(\mu\)</span> for approximately 95% of samples taken.</p>
+<p>As the sample size <span class="math inline">\(n\)</span> increases (the number of random samples), the estimate <span class="math inline">\(\bar{X}\)</span> becomes more precise because <span class="math inline">\(\text{sd}(\bar{X})\)</span> becomes smaller.</p>
+<p><span class="math display">\[
+Z=\frac{\bar{X}-E[\bar{X}]}{\text{sd}(\bar{X})}=\frac{(\bar{X}-\mu)}{\sigma/\sqrt{n}}\sim \text{Normal}(0,1)
+\]</span></p>
+</section>
+<section id="central-limit-theorem-clt" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="central-limit-theorem-clt"><span class="header-section-number">1.4</span> Central limit theorem (CLT)</h2>
+<p><span class="math display">\[
+\sqrt{n}(\bar{X}-u)\sim\text{Normal}(0,\sigma^2)
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you repeatedly sample a random variable a large number of times, the distribution of the sample mean will approach a normal distribution regardless of the initial distribution of the random variable.</p>
+<p>The sample mean <span class="math inline">\(\bar{X}\)</span> is approximately Normally distributed in large samples.</p>
+<p>Heaviness of the tails of the distribution and lack of symmetry are important factors in slowing down the CLT effect.</p>
+<p>Diagnostic: one should always plot the sample data. If the data look as though they may have come from a distribution that isn’t extremely non-normal, we can feel much more confident about calculations based on a Normal approximation with moderate-sized samples.</p>
+</div>
+</div>
+<p>Why this is useful? Because in practice we never know the exact form of the distribution we are sampling from (e.g., can be exponential, trangular, uniform…), but CLT tells us we can apply normal-distribution theory for means from large samples even when the original distribution is not Normal.</p>
+<p>sample size for CLT to work: it depends. If a distribution is close in shape to the Normal, the CLT works fast (e.g, 4-12). For an exponential distribution, it requires 30-50 (depends on the degree of skewness).</p>
+</section>
+<section id="bias" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="bias"><span class="header-section-number">1.5</span> Bias</h2>
+<p>bias= <span class="math inline">\(E(\hat{\Theta})-\theta\)</span></p>
+</section>
+<section id="precision" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="precision"><span class="header-section-number">1.6</span> Precision</h2>
+<p>The precision of the estimate is a measure of how variable the estimator is in repeated sampling.</p>
+<p>A precise estimate is one that is subject to very little sampling variation.</p>
+<p>measure of precision: standard deviation of the sampling distribution of the estimator <span class="math inline">\(\text{sd}(\hat{\Theta})\)</span></p>
+<p>However, the actual standard deviation of the sampling distribution is unknown. So we use an estimate of the actual standard deviation - standard error <span class="math inline">\(\text{se}(\hat{\theta})\)</span> as the measure of the precision of our estimate.</p>
+<p>Smaller standard errors correspond to more precise estimates.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Precision
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The standard error of any estimate <span class="math inline">\(\hat{\theta}\)</span></p>
+<p><span class="math inline">\(\text{se}(\hat{\theta})\)</span> estimates the variability of <span class="math inline">\(\hat{\theta}\)</span> values in repeated sampling</p>
+<p>it is a measure of precision of <span class="math inline">\(\hat{\theta}\)</span> .</p>
+</div>
+</div>
+<p>Note:</p>
+<ul>
+<li><p>An estimate can be biased but precise.</p></li>
+<li><p>An estimate can be precise but biased</p></li>
+</ul>
+<section id="accuracy" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">1.6.1</span> Accuracy</h3>
+<p>An accurate estimator is one that generally gives estimates that are close to the parameter estimated so that it will have low bias and high precision.</p>
+</section>
+<section id="sample-proportion" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="sample-proportion"><span class="header-section-number">1.6.2</span> Sample proportion</h3>
+<p>The sample proportion <span class="math inline">\(\hat{p}\)</span> estimates the population proportion <span class="math inline">\(p\)</span>.</p>
+<p>The number of people reported having seen illegal drugs <span class="math inline">\(Y\sim \text{Binomial}(n,p)\)</span>. We have</p>
+<p><span class="math display">\[
+E[Y]=np, \text{Var}(Y)=np(1-p)
+\]</span></p>
+<p>The sample proportion random variable <span class="math inline">\(\hat{P}=Y/n\)</span>.</p>
+<p><span class="math display">\[
+E[\hat{P}]=E[Y/n]=\frac{1}{n}E[Y]=p, \\
+\text{sd}(\hat{P})=\sqrt{\text{Var}(\hat{P})}=\sqrt{\text{Var}(Y/n)}=\sqrt{\frac{1}{n^2} np(1-p)}=\sqrt{\frac{p(1-p)}{n}}
+\]</span></p>
+<p>By CLT, we have <span class="math inline">\(\hat{P}\sim \text{Normal}(E[\hat{P}], \text{sd}(\hat{P})^2)\)</span>.</p>
+<p>However, in reality, we wouldn’t know the population proportion <span class="math inline">\(p\)</span>, so we want to use a sample proportion <span class="math inline">\(\hat{p}\)</span> to estimate this unknown <span class="math inline">\(p\)</span>. Thus, we use standard error</p>
+<p><span class="math display">\[
+\text{se}(\hat{p})=\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+\]</span></p>
+</section>
+<section id="standard-error-for-a-difference-between-independent-estimates" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="standard-error-for-a-difference-between-independent-estimates"><span class="header-section-number">1.6.3</span> Standard error for a difference between independent estimates</h3>
+<p><span class="math display">\[
+\text{se}(\hat{\theta_1}-\hat{\theta_2})=\sqrt{\text{se}(\hat{\theta_1})^2+\text{se}(\hat{\theta_2})^2}
+\]</span></p>
+<p><span class="math display">\[
+\text{se}(\hat{p_1}-\hat{p_2})=\sqrt{\text{se}(\hat{p_1})^2+\text{se}(\hat{p_2})^2}=\text{se}(\hat{p})=\sqrt{\frac{\hat{p_1}(1-\hat{p_1})}{n_1}+\frac{\hat{p_2}(1-\hat{p_2})}{n_2}}\]</span> <span class="math display">\[
+\begin{aligned}
+H_0: &amp; \hat{p}=p_0 \\
+H_1:&amp;\hat{p} \neq p_0
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+Z=\frac{\hat{p}-p_0}{\text{sd}(\hat{p})}=\frac{\hat{p}-p_0}{\sigma/\sqrt{n}}\sim \text{Normal}(0,1)
+\]</span></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-knuth84" class="csl-entry" role="listitem">
+Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -686,8 +850,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Upcoming.html" class="pagination-link" aria-label="Upcoming Content">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Upcoming Content</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Hypothesis.html" class="pagination-link" aria-label="Hypothesis Testing">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

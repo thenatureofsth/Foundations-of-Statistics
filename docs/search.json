@@ -1,52 +1,52 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Foundations of Statistics",
+    "objectID": "Hypothesis.html",
+    "href": "Hypothesis.html",
+    "title": "3  Hypothesis Testing",
     "section": "",
-    "text": "Preface\nAll about Statistics.",
+    "text": "3.1 P-value\np-value is the probability of observing something at least as extreme as our observation, if the null hypothesis is true.\nFor example, in the above example, we calculate the p-value of 0.021 as a measure of the strength of evidence against the hypothesis that \\(p=0.5\\) (fair coin).",
     "crumbs": [
-      "Preface"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hypothesis Testing</span>"
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "2 Descriptive Statistics\npopulation deviation\n\\sigma=\\sqrt{\\frac{\\sum_{i=1}^N (X_i-\\mu)^2}{N}}\nstandard deviation of a sample\ns=\\sqrt{\\frac{\\sum_{i=1}^n (X_i-\\mu)^2}{n-1}}\nis descriptive statistics, which is a description of the variation in measurements. However, the standard error of the mean is descriptive of the random sampling process, which is a probabilistic statement about how the sample size will provide a better bound on estimates of the population mean, in light of the central limit theorem.\nFor a sample of size n,\nstandard deviation of the sample mean\ns.d(\\bar{X}) = \\frac{\\sigma}{\\sqrt{n}}\nbut since \\sigma is unknow, we use standard error of the sample mean\ns.e(\\bar{X})=\\frac{s}{\\sqrt{n}}\nPut simply, the standard error of the sample mean is an estimate of how far the sample mean is likely to be from the population mean, whereas the standard deviation of the sample is the degree to which individuals within the sample differ from the sample mean.[9] If the population standard deviation is finite, the standard error of the mean of the sample will tend to zero (s.e\\to 0 )with increasing sample size, because the estimate of the population mean will improve, while the standard deviation of the sample s will tend to approximate the population standard deviation \\sigma as the sample size increases.",
+    "objectID": "Hypothesis.html#p-value-interpretation",
+    "href": "Hypothesis.html#p-value-interpretation",
+    "title": "3  Hypothesis Testing",
+    "section": "3.2 P-value Interpretation",
+    "text": "3.2 P-value Interpretation\np-value =0.021\nWe have some evidence that \\(p\\neq 0.5\\) (the coin is not fair)\nit only tells us that in our sample, we have evidence that \\(p\\) is different from 0.5\nbut it does not mean the difference between true \\(p\\) and 0.5 is large, or the difference between true \\(p\\) and 0.5 is important in practical terms.\nSo what we get is “ Substantial evidence of a difference”, not “Evidence of a substantial difference”.\nMost people agree that p-value is a useful measure of the strength of evidence against the null hypothesis.\nThe smaller the p-value, the stronger the evidence against the null hypothesis.\nAs a rule of thumb, we consider the p-values of 0.05 and less start to suggest that the null hypothesis is doubtful.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hypothesis Testing</span>"
     ]
   },
   {
-    "objectID": "intro.html#confidence-interval",
-    "href": "intro.html#confidence-interval",
-    "title": "1  Introduction",
-    "section": "2.1 Confidence interval",
-    "text": "2.1 Confidence interval\nSuppose X_1,...,X_n is an independent sample from a population Normal(\\mu,\\sigma^2).\nSample mean\n\n\\bar{X} = \\frac{X_1+...+X_n}{n}\n\nSample variance\n\ns^2=\\frac{1}{n-1}\\sum_{i=1}^n (X_i-\\bar{X})^2\n\nThen\n\nT=\\frac{\\bar{X}-\\mu}{\\frac{S}{\\sqrt{n}}}=\\frac{\\bar{X}-\\mu}{s.e}\n\ns.e is the standard error of the sample mean\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "objectID": "Hypothesis.html#statistical-significance",
+    "href": "Hypothesis.html#statistical-significance",
+    "title": "3  Hypothesis Testing",
+    "section": "3.3 Statistical Significance",
+    "text": "3.3 Statistical Significance\nThe result of a hypothesis test is significant at the 5% level if the p-value is less than 0.05.\nThe chance of seeing what we did see (9 heads out of 10 tosses), or more, is less than 5% if the null hypothesis is true.\nNote that 5% of the time, we will get a p-value &lt;0.05 when the null hypothesis is TRUE!\nA small p-value does Not mean that the null hypothesis is definitely wrong.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hypothesis Testing</span>"
     ]
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "objectID": "Hypothesis.html#hypothesis-testing-example",
+    "href": "Hypothesis.html#hypothesis-testing-example",
+    "title": "3  Hypothesis Testing",
+    "section": "3.4 Hypothesis testing Example",
+    "text": "3.4 Hypothesis testing Example\n\\[\n\\begin{aligned}\nH_0: &\\mu=\\mu_0 \\\\\nH_1:&\\mu\\neq\\mu_0\n\\end{aligned}\n\\]",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hypothesis Testing</span>"
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "objectID": "Hypothesis.html#z-test-vs-t-test",
+    "href": "Hypothesis.html#z-test-vs-t-test",
+    "title": "3  Hypothesis Testing",
+    "section": "3.5 Z-test vs T-test",
+    "text": "3.5 Z-test vs T-test\nwhen sample size is large and population variance \\(\\sigma^2\\) is known,\n\\[\nZ=\\frac{\\bar{X}-E[\\bar{X}]}{\\text{sd}(\\bar{X})}=\\frac{(\\bar{X}-\\mu)}{\\sigma/\\sqrt{n}}\\sim \\text{Normal}(0,1)\n\\]\nWhen sample size is small and population variance \\(\\sigma^2\\) is unknown, we use the sample variance \\(s^2\\) instead\nThe t-test is parametrized by the degrees of freedom, which refers to the number of independent observations in a dataset, denoted by \\(\\nu=n-1\\)\n\\[\nT=\\frac{\\bar{X}-E[\\bar{X}]}{\\text{se}(\\bar{X})}=\\frac{\\bar{X}-\\mu}{s/\\sqrt{n}}\\sim \\text{Student}(df={n-1}),\n\\]\nwhere \\(s^2 =\\frac{\\sum_{i=1}^n(X_i-\\bar{X})^2}{n-1}\\).\nThe additional variability of T is reflected in its distribution being flatter and having longer tails than the standard Normal.\nT-distribution is similar to the normal distribution in appearance but has larger tails. This means that extreme events happen with greater frequency than the modeled distribution would predict.",
     "crumbs": [
-      "References"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hypothesis Testing</span>"
     ]
   },
   {
@@ -70,23 +70,133 @@
     ]
   },
   {
-    "objectID": "Upcoming.html",
-    "href": "Upcoming.html",
-    "title": "2  Upcoming Content",
-    "section": "",
-    "text": "I will think about it.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Upcoming Content</span>"
-    ]
-  },
-  {
     "objectID": "Basics.html#randomisation",
     "href": "Basics.html#randomisation",
     "title": "1  Basics",
     "section": "1.3 Randomisation",
-    "text": "1.3 Randomisation\nHow can we use sampled data to inform us about the population from which the data are drawn?\nSuppose that \\(X_1,X_2,...,X_n\\) represent a random sample from a distribution with mean \\(\\mu\\) , then\n\\[\nE[X_1+X_2+...+X_n]=E[X_1]+E[X_2]+...+E[X_n]=n\\mu.\n\\]\nSince \\(X_1,X_2,...,X_n\\) are independent (hence uncorrelated), we have\n\\[\n\\text{Var}(X_1+X_2+...+X_n)=\\text{Var}(X_1)+\\text{Var}(X_2)+...+\\text{Var}(X_n)=n\\sigma^2\n\\]\n\\[\n\\begin{aligned}\n\\text{sd}(X_1+X_2+...+X_n)&=\\sqrt{\\text{Var}(X_1+X_2+...+X_n)}\\\\\n&=\\sqrt{\\text{Var}(X_1)+\\text{Var}(X_2)+...+\\text{Var}(X_n)}\\\\\n&=\\sqrt{n\\sigma^2}=\\sqrt{n} \\sigma\n\\end{aligned}\n\\]",
+    "text": "1.3 Randomisation\nHow can we use sampled data to inform us about the population from which the data are drawn?\nSuppose that \\(X_1,X_2,...,X_n\\) represent a random sample from a distribution with mean \\(\\mu\\) , then\n\\[\nE[X_1+X_2+...+X_n]=E[X_1]+E[X_2]+...+E[X_n]=n\\mu.\n\\]\nSince \\(X_1,X_2,...,X_n\\) are independent (hence uncorrelated), we have\n\\[\n\\text{Var}(X_1+X_2+...+X_n)=\\text{Var}(X_1)+\\text{Var}(X_2)+...+\\text{Var}(X_n)=n\\sigma^2\n\\]\n\\[\n\\begin{aligned}\n\\text{sd}(X_1+X_2+...+X_n)&=\\sqrt{\\text{Var}(X_1+X_2+...+X_n)}\\\\\n&=\\sqrt{\\text{Var}(X_1)+\\text{Var}(X_2)+...+\\text{Var}(X_n)}\\\\\n&=\\sqrt{n\\sigma^2}=\\sqrt{n} \\sigma\n\\end{aligned}\n\\]\nWe now have the mean and standard deviation of the sample mean \\(\\bar{X}\\)\n\\[E[\\bar{X}]=E\\left[\\frac{\\sum X_i}{n}\\right]=\\frac{1}{n} n\\mu=\\mu\\]\n\\[\n\\begin{aligned}\n\\text{sd}(\\bar{X})&=\\text{sd}\\left(\\frac{\\sum X_i}{n}\\right)=\\sqrt{\\text{Var}\\left(\\frac{\\sum X_i}{n}\\right)}\\\\\n&=\\sqrt{\\frac{1}{n^2}\\text{Var}(\\sum X_i)}\\\\\n&=\\sqrt{\\frac{1}{n^2}n\\sigma^2}\\\\\n&=\\frac{\\sigma}{\\sqrt{n}}\n\\end{aligned}\n\\]\nwhere \\(\\mu\\) is the population mean and \\(\\sigma\\) is the population standard deviation.\npopulation standard deviation\n\\[\n\\sigma=\\sqrt{\\text{Var}(X)}=\\sqrt{\\frac{\\sum_{i=1}^n(X_i-\\mu)^2}{n}}\n\\]\nsample standard deviation\n\\[\ns=\\sqrt{\\frac{\\sum_{i=1}^N (X_i-\\mu)^2}{N-1}}\n\\]\nHowever, in practice nobody knows \\(\\sigma\\). So we use standard error\n\\[\n\\text{se}(\\bar{x})=\\frac{s_x}{\\sqrt{n}},\n\\]\nwhere \\(s_x\\) is the sample standard deviation.\nNote that here we use \\(\\text{se}(\\bar{x})\\) to indicate it is a fixed value for a particular sample. The corresponding random variable will be denoted by \\(\\text{se}(\\bar{X})\\).\nThe sampling distribution of the sample mean is \\(\\bar{X}\\sim \\text{Normal}(\\mu_{\\bar{X}}=\\mu,\\sigma_{\\bar{X}}=\\sigma/\\sqrt{n})\\). Thus, in the long run, the observed sample mean falls within \\(\\pm 2 \\text{sd}(\\bar{X})\\) of the population mean \\(\\mu\\) for approximately 95% of samples taken.\nAs the sample size \\(n\\) increases (the number of random samples), the estimate \\(\\bar{X}\\) becomes more precise because \\(\\text{sd}(\\bar{X})\\) becomes smaller.\n\\[\nZ=\\frac{\\bar{X}-E[\\bar{X}]}{\\text{sd}(\\bar{X})}=\\frac{(\\bar{X}-\\mu)}{\\sigma/\\sqrt{n}}\\sim \\text{Normal}(0,1)\n\\]",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Basics</span>"
+    ]
+  },
+  {
+    "objectID": "Basics.html#central-limit-theorem-clt",
+    "href": "Basics.html#central-limit-theorem-clt",
+    "title": "1  Basics",
+    "section": "1.4 Central limit theorem (CLT)",
+    "text": "1.4 Central limit theorem (CLT)\n\\[\n\\sqrt{n}(\\bar{X}-u)\\sim\\text{Normal}(0,\\sigma^2)\n\\]\n\n\n\n\n\n\nNote\n\n\n\nIf you repeatedly sample a random variable a large number of times, the distribution of the sample mean will approach a normal distribution regardless of the initial distribution of the random variable.\nThe sample mean \\(\\bar{X}\\) is approximately Normally distributed in large samples.\nHeaviness of the tails of the distribution and lack of symmetry are important factors in slowing down the CLT effect.\nDiagnostic: one should always plot the sample data. If the data look as though they may have come from a distribution that isn’t extremely non-normal, we can feel much more confident about calculations based on a Normal approximation with moderate-sized samples.\n\n\nWhy this is useful? Because in practice we never know the exact form of the distribution we are sampling from (e.g., can be exponential, trangular, uniform…), but CLT tells us we can apply normal-distribution theory for means from large samples even when the original distribution is not Normal.\nsample size for CLT to work: it depends. If a distribution is close in shape to the Normal, the CLT works fast (e.g, 4-12). For an exponential distribution, it requires 30-50 (depends on the degree of skewness).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Basics</span>"
+    ]
+  },
+  {
+    "objectID": "Basics.html#bias",
+    "href": "Basics.html#bias",
+    "title": "1  Basics",
+    "section": "1.5 Bias",
+    "text": "1.5 Bias\nbias= \\(E(\\hat{\\Theta})-\\theta\\)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Basics</span>"
+    ]
+  },
+  {
+    "objectID": "Basics.html#precision",
+    "href": "Basics.html#precision",
+    "title": "1  Basics",
+    "section": "1.6 Precision",
+    "text": "1.6 Precision\nThe precision of the estimate is a measure of how variable the estimator is in repeated sampling.\nA precise estimate is one that is subject to very little sampling variation.\nmeasure of precision: standard deviation of the sampling distribution of the estimator \\(\\text{sd}(\\hat{\\Theta})\\)\nHowever, the actual standard deviation of the sampling distribution is unknown. So we use an estimate of the actual standard deviation - standard error \\(\\text{se}(\\hat{\\theta})\\) as the measure of the precision of our estimate.\nSmaller standard errors correspond to more precise estimates.\n\n\n\n\n\n\nPrecision\n\n\n\nThe standard error of any estimate \\(\\hat{\\theta}\\)\n\\(\\text{se}(\\hat{\\theta})\\) estimates the variability of \\(\\hat{\\theta}\\) values in repeated sampling\nit is a measure of precision of \\(\\hat{\\theta}\\) .\n\n\nNote:\n\nAn estimate can be biased but precise.\nAn estimate can be precise but biased\n\n\n1.6.1 Accuracy\nAn accurate estimator is one that generally gives estimates that are close to the parameter estimated so that it will have low bias and high precision.\n\n\n1.6.2 Sample proportion\nThe sample proportion \\(\\hat{p}\\) estimates the population proportion \\(p\\).\nThe number of people reported having seen illegal drugs \\(Y\\sim \\text{Binomial}(n,p)\\). We have\n\\[\nE[Y]=np, \\text{Var}(Y)=np(1-p)\n\\]\nThe sample proportion random variable \\(\\hat{P}=Y/n\\).\n\\[\nE[\\hat{P}]=E[Y/n]=\\frac{1}{n}E[Y]=p, \\\\\n\\text{sd}(\\hat{P})=\\sqrt{\\text{Var}(\\hat{P})}=\\sqrt{\\text{Var}(Y/n)}=\\sqrt{\\frac{1}{n^2} np(1-p)}=\\sqrt{\\frac{p(1-p)}{n}}\n\\]\nBy CLT, we have \\(\\hat{P}\\sim \\text{Normal}(E[\\hat{P}], \\text{sd}(\\hat{P})^2)\\).\nHowever, in reality, we wouldn’t know the population proportion \\(p\\), so we want to use a sample proportion \\(\\hat{p}\\) to estimate this unknown \\(p\\). Thus, we use standard error\n\\[\n\\text{se}(\\hat{p})=\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\n\\]\n\n\n1.6.3 Standard error for a difference between independent estimates\n\\[\n\\text{se}(\\hat{\\theta_1}-\\hat{\\theta_2})=\\sqrt{\\text{se}(\\hat{\\theta_1})^2+\\text{se}(\\hat{\\theta_2})^2}\n\\]\n\\[\n\\text{se}(\\hat{p_1}-\\hat{p_2})=\\sqrt{\\text{se}(\\hat{p_1})^2+\\text{se}(\\hat{p_2})^2}=\\text{se}(\\hat{p})=\\sqrt{\\frac{\\hat{p_1}(1-\\hat{p_1})}{n_1}+\\frac{\\hat{p_2}(1-\\hat{p_2})}{n_2}}\\] \\[\n\\begin{aligned}\nH_0: & \\hat{p}=p_0 \\\\\nH_1:&\\hat{p} \\neq p_0\n\\end{aligned}\n\\]\n\\[\nZ=\\frac{\\hat{p}-p_0}{\\text{sd}(\\hat{p})}=\\frac{\\hat{p}-p_0}{\\sigma/\\sqrt{n}}\\sim \\text{Normal}(0,1)\n\\]\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Basics</span>"
+    ]
+  },
+  {
+    "objectID": "Upcoming.html",
+    "href": "Upcoming.html",
+    "title": "4  Upcoming Content",
+    "section": "",
+    "text": "I will think about it.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Upcoming Content</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "Sampling.html",
+    "href": "Sampling.html",
+    "title": "1  Sampling",
+    "section": "",
+    "text": "1.1 Descriptive Statistics\npopulation deviation\n\\[\n\\sigma=\\sqrt{\\frac{\\sum_{i=1}^N (X_i-\\mu)^2}{N}}\n\\]\nstandard deviation of a sample\n\\[\ns=\\sqrt{\\frac{\\sum_{i=1}^n (X_i-\\mu)^2}{n-1}}\n\\]\nis descriptive statistics, which is a description of the variation in measurements. However, the standard error of the mean is descriptive of the random sampling process, which is a probabilistic statement about how the sample size will provide a better bound on estimates of the population mean, in light of the central limit theorem.\nFor a sample of size \\(n\\),\nstandard deviation of the sample mean\n\\[\ns.d(\\bar{X}) = \\frac{\\sigma}{\\sqrt{n}}\n\\]\nbut since \\(\\sigma\\) is unknow, we use standard error of the sample mean\n\\[\ns.e(\\bar{X})=\\frac{s}{\\sqrt{n}}\n\\]\nPut simply, the standard error of the sample mean is an estimate of how far the sample mean is likely to be from the population mean, whereas the standard deviation of the sample is the degree to which individuals within the sample differ from the sample mean.[9] If the population standard deviation is finite, the standard error of the mean of the sample will tend to zero (\\(s.e\\to 0\\) )with increasing sample size, because the estimate of the population mean will improve, while the standard deviation of the sample \\(s\\) will tend to approximate the population standard deviation \\(\\sigma\\) as the sample size increases.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sampling</span>"
+    ]
+  },
+  {
+    "objectID": "Sampling.html#confidence-interval",
+    "href": "Sampling.html#confidence-interval",
+    "title": "1  Sampling",
+    "section": "1.2 Confidence interval",
+    "text": "1.2 Confidence interval\nSuppose \\(X_1,...,X_n\\) is an independent sample from a population \\(Normal(\\mu,\\sigma^2)\\).\nSample mean\n\\[\n\\bar{X} = \\frac{X_1+...+X_n}{n}\n\\]\nSample variance\n\\[\ns^2=\\frac{1}{n-1}\\sum_{i=1}^n (X_i-\\bar{X})^2\n\\]\nThen\n\\[\nT=\\frac{\\bar{X}-\\mu}{\\frac{S}{\\sqrt{n}}}=\\frac{\\bar{X}-\\mu}{s.e}\n\\]\ns.e is the standard error of the sample mean",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sampling</span>"
+    ]
+  },
+  {
+    "objectID": "Sampling.html#randomisation",
+    "href": "Sampling.html#randomisation",
+    "title": "1  Sampling",
+    "section": "1.3 Randomisation",
+    "text": "1.3 Randomisation\nHow can we use sampled data to inform us about the population from which the data are drawn?\nSuppose that \\(X_1,X_2,...,X_n\\) represent a random sample from a distribution with mean \\(\\mu\\) , then\n\\[\nE[X_1+X_2+...+X_n]=E[X_1]+E[X_2]+...+E[X_n]=n\\mu.\n\\]\nSince \\(X_1,X_2,...,X_n\\) are independent (hence uncorrelated), we have\n\\[\n\\text{Var}(X_1+X_2+...+X_n)=\\text{Var}(X_1)+\\text{Var}(X_2)+...+\\text{Var}(X_n)=n\\sigma^2\n\\]\n\\[\n\\begin{aligned}\n\\text{sd}(X_1+X_2+...+X_n)&=\\sqrt{\\text{Var}(X_1+X_2+...+X_n)}\\\\\n&=\\sqrt{\\text{Var}(X_1)+\\text{Var}(X_2)+...+\\text{Var}(X_n)}\\\\\n&=\\sqrt{n\\sigma^2}=\\sqrt{n} \\sigma\n\\end{aligned}\n\\]\nWe now have the mean and standard deviation of the sample mean \\(\\bar{X}\\)\n\\[E[\\bar{X}]=E\\left[\\frac{\\sum X_i}{n}\\right]=\\frac{1}{n} n\\mu=\\mu\\]\n\\[\n\\begin{aligned}\n\\text{sd}(\\bar{X})&=\\text{sd}\\left(\\frac{\\sum X_i}{n}\\right)=\\sqrt{\\text{Var}\\left(\\frac{\\sum X_i}{n}\\right)}\\\\\n&=\\sqrt{\\frac{1}{n^2}\\text{Var}(\\sum X_i)}\\\\\n&=\\sqrt{\\frac{1}{n^2}n\\sigma^2}\\\\\n&=\\frac{\\sigma}{\\sqrt{n}}\n\\end{aligned}\n\\]\nwhere \\(\\mu\\) is the population mean and \\(\\sigma\\) is the population standard deviation.\npopulation standard deviation\n\\[\n\\sigma=\\sqrt{\\text{Var}(X)}=\\sqrt{\\frac{\\sum_{i=1}^n(X_i-\\mu)^2}{n}}\n\\]\nsample standard deviation\n\\[\ns=\\sqrt{\\frac{\\sum_{i=1}^N (X_i-\\mu)^2}{N-1}}\n\\]\nHowever, in practice nobody knows \\(\\sigma\\). So we use standard error\n\\[\n\\text{se}(\\bar{x})=\\frac{s_x}{\\sqrt{n}},\n\\]\nwhere \\(s_x\\) is the sample standard deviation.\nNote that here we use \\(\\text{se}(\\bar{x})\\) to indicate it is a fixed value for a particular sample. The corresponding random variable will be denoted by \\(\\text{se}(\\bar{X})\\).\nThe sampling distribution of the sample mean is \\(\\bar{X}\\sim \\text{Normal}(\\mu_{\\bar{X}}=\\mu,\\sigma_{\\bar{X}}=\\sigma/\\sqrt{n})\\). Thus, in the long run, the observed sample mean falls within \\(\\pm 2 \\text{sd}(\\bar{X})\\) of the population mean \\(\\mu\\) for approximately 95% of samples taken.\nAs the sample size \\(n\\) increases (the number of random samples), the estimate \\(\\bar{X}\\) becomes more precise because \\(\\text{sd}(\\bar{X})\\) becomes smaller.\n\\[\nZ=\\frac{\\bar{X}-E[\\bar{X}]}{\\text{sd}(\\bar{X})}=\\frac{(\\bar{X}-\\mu)}{\\sigma/\\sqrt{n}}\\sim \\text{Normal}(0,1)\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sampling</span>"
+    ]
+  },
+  {
+    "objectID": "Sampling.html#central-limit-theorem-clt",
+    "href": "Sampling.html#central-limit-theorem-clt",
+    "title": "1  Sampling",
+    "section": "1.4 Central limit theorem (CLT)",
+    "text": "1.4 Central limit theorem (CLT)\n\\[\n\\sqrt{n}(\\bar{X}-u)\\sim\\text{Normal}(0,\\sigma^2)\n\\]\n\n\n\n\n\n\nNote\n\n\n\nIf you repeatedly sample a random variable a large number of times, the distribution of the sample mean will approach a normal distribution regardless of the initial distribution of the random variable.\nThe sample mean \\(\\bar{X}\\) is approximately Normally distributed in large samples.\nHeaviness of the tails of the distribution and lack of symmetry are important factors in slowing down the CLT effect.\nDiagnostic: one should always plot the sample data. If the data look as though they may have come from a distribution that isn’t extremely non-normal, we can feel much more confident about calculations based on a Normal approximation with moderate-sized samples.\n\n\nWhy this is useful? Because in practice we never know the exact form of the distribution we are sampling from (e.g., can be exponential, trangular, uniform…), but CLT tells us we can apply normal-distribution theory for means from large samples even when the original distribution is not Normal.\nsample size for CLT to work: it depends. If a distribution is close in shape to the Normal, the CLT works fast (e.g, 4-12). For an exponential distribution, it requires 30-50 (depends on the degree of skewness).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sampling</span>"
+    ]
+  },
+  {
+    "objectID": "Sampling.html#bias",
+    "href": "Sampling.html#bias",
+    "title": "1  Sampling",
+    "section": "1.5 Bias",
+    "text": "1.5 Bias\nbias= \\(E(\\hat{\\Theta})-\\theta\\)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sampling</span>"
+    ]
+  },
+  {
+    "objectID": "Sampling.html#precision",
+    "href": "Sampling.html#precision",
+    "title": "1  Sampling",
+    "section": "1.6 Precision",
+    "text": "1.6 Precision\nThe precision of the estimate is a measure of how variable the estimator is in repeated sampling.\nA precise estimate is one that is subject to very little sampling variation.\nmeasure of precision: standard deviation of the sampling distribution of the estimator \\(\\text{sd}(\\hat{\\Theta})\\)\nHowever, the actual standard deviation of the sampling distribution is unknown. So we use an estimate of the actual standard deviation - standard error \\(\\text{se}(\\hat{\\theta})\\) as the measure of the precision of our estimate.\nSmaller standard errors correspond to more precise estimates.\n\n\n\n\n\n\nPrecision\n\n\n\nThe standard error of any estimate \\(\\hat{\\theta}\\)\n\\(\\text{se}(\\hat{\\theta})\\) estimates the variability of \\(\\hat{\\theta}\\) values in repeated sampling\nit is a measure of precision of \\(\\hat{\\theta}\\) .\n\n\nNote:\n\nAn estimate can be biased but precise.\nAn estimate can be precise but biased\n\n\n1.6.1 Accuracy\nAn accurate estimator is one that generally gives estimates that are close to the parameter estimated so that it will have low bias and high precision.\n\n\n1.6.2 Sample proportion\nThe sample proportion \\(\\hat{p}\\) estimates the population proportion \\(p\\).\nThe number of people reported having seen illegal drugs \\(Y\\sim \\text{Binomial}(n,p)\\). We have\n\\[\nE[Y]=np, \\text{Var}(Y)=np(1-p)\n\\]\nThe sample proportion random variable \\(\\hat{P}=Y/n\\).\n\\[\nE[\\hat{P}]=E[Y/n]=\\frac{1}{n}E[Y]=p, \\\\\n\\text{sd}(\\hat{P})=\\sqrt{\\text{Var}(\\hat{P})}=\\sqrt{\\text{Var}(Y/n)}=\\sqrt{\\frac{1}{n^2} np(1-p)}=\\sqrt{\\frac{p(1-p)}{n}}\n\\]\nBy CLT, we have \\(\\hat{P}\\sim \\text{Normal}(E[\\hat{P}], \\text{sd}(\\hat{P})^2)\\).\nHowever, in reality, we wouldn’t know the population proportion \\(p\\), so we want to use a sample proportion \\(\\hat{p}\\) to estimate this unknown \\(p\\). Thus, we use standard error\n\\[\n\\text{se}(\\hat{p})=\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\n\\]\n\n\n1.6.3 Standard error for a difference between independent estimates\n\\[\n\\text{se}(\\hat{\\theta_1}-\\hat{\\theta_2})=\\sqrt{\\text{se}(\\hat{\\theta_1})^2+\\text{se}(\\hat{\\theta_2})^2}\n\\]\n\\[\n\\text{se}(\\hat{p_1}-\\hat{p_2})=\\sqrt{\\text{se}(\\hat{p_1})^2+\\text{se}(\\hat{p_2})^2}=\\text{se}(\\hat{p})=\\sqrt{\\frac{\\hat{p_1}(1-\\hat{p_1})}{n_1}+\\frac{\\hat{p_2}(1-\\hat{p_2})}{n_2}}\\] \\[\n\\begin{aligned}\nH_0: & \\hat{p}=p_0 \\\\\nH_1:&\\hat{p} \\neq p_0\n\\end{aligned}\n\\]\n\\[\nZ=\\frac{\\hat{p}-p_0}{\\text{sd}(\\hat{p})}=\\frac{\\hat{p}-p_0}{\\sigma/\\sqrt{n}}\\sim \\text{Normal}(0,1)\n\\]\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sampling</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Foundations of Statistics",
+    "section": "",
+    "text": "Preface\nAll about Statistics.",
+    "crumbs": [
+      "Preface"
     ]
   }
 ]
