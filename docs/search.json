@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Foundations of Statistics",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "Preface\nAll about Statistics.",
     "crumbs": [
       "Preface"
     ]
@@ -47,6 +47,46 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "Basics.html",
+    "href": "Basics.html",
+    "title": "1  Basics",
+    "section": "",
+    "text": "1.1 Descriptive Statistics\npopulation deviation\n\\[\n\\sigma=\\sqrt{\\frac{\\sum_{i=1}^N (X_i-\\mu)^2}{N}}\n\\]\nstandard deviation of a sample\n\\[\ns=\\sqrt{\\frac{\\sum_{i=1}^n (X_i-\\mu)^2}{n-1}}\n\\]\nis descriptive statistics, which is a description of the variation in measurements. However, the standard error of the mean is descriptive of the random sampling process, which is a probabilistic statement about how the sample size will provide a better bound on estimates of the population mean, in light of the central limit theorem.\nFor a sample of size \\(n\\),\nstandard deviation of the sample mean\n\\[\ns.d(\\bar{X}) = \\frac{\\sigma}{\\sqrt{n}}\n\\]\nbut since \\(\\sigma\\) is unknow, we use standard error of the sample mean\n\\[\ns.e(\\bar{X})=\\frac{s}{\\sqrt{n}}\n\\]\nPut simply, the standard error of the sample mean is an estimate of how far the sample mean is likely to be from the population mean, whereas the standard deviation of the sample is the degree to which individuals within the sample differ from the sample mean.[9] If the population standard deviation is finite, the standard error of the mean of the sample will tend to zero (\\(s.e\\to 0\\) )with increasing sample size, because the estimate of the population mean will improve, while the standard deviation of the sample \\(s\\) will tend to approximate the population standard deviation \\(\\sigma\\) as the sample size increases.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Basics</span>"
+    ]
+  },
+  {
+    "objectID": "Basics.html#confidence-interval",
+    "href": "Basics.html#confidence-interval",
+    "title": "1  Basics",
+    "section": "1.2 Confidence interval",
+    "text": "1.2 Confidence interval\nSuppose \\(X_1,...,X_n\\) is an independent sample from a population \\(Normal(\\mu,\\sigma^2)\\).\nSample mean\n\\[\n\\bar{X} = \\frac{X_1+...+X_n}{n}\n\\]\nSample variance\n\\[\ns^2=\\frac{1}{n-1}\\sum_{i=1}^n (X_i-\\bar{X})^2\n\\]\nThen\n\\[\nT=\\frac{\\bar{X}-\\mu}{\\frac{S}{\\sqrt{n}}}=\\frac{\\bar{X}-\\mu}{s.e}\n\\]\ns.e is the standard error of the sample mean",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Basics</span>"
+    ]
+  },
+  {
+    "objectID": "Upcoming.html",
+    "href": "Upcoming.html",
+    "title": "2  Upcoming Content",
+    "section": "",
+    "text": "I will think about it.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Upcoming Content</span>"
+    ]
+  },
+  {
+    "objectID": "Basics.html#randomisation",
+    "href": "Basics.html#randomisation",
+    "title": "1  Basics",
+    "section": "1.3 Randomisation",
+    "text": "1.3 Randomisation\nHow can we use sampled data to inform us about the population from which the data are drawn?\nSuppose that \\(X_1,X_2,...,X_n\\) represent a random sample from a distribution with mean \\(\\mu\\) , then\n\\[\nE[X_1+X_2+...+X_n]=E[X_1]+E[X_2]+...+E[X_n]=n\\mu.\n\\]\nSince \\(X_1,X_2,...,X_n\\) are independent (hence uncorrelated), we have\n\\[\n\\text{Var}(X_1+X_2+...+X_n)=\\text{Var}(X_1)+\\text{Var}(X_2)+...+\\text{Var}(X_n)=n\\sigma^2\n\\]\n\\[\n\\begin{aligned}\n\\text{sd}(X_1+X_2+...+X_n)&=\\sqrt{\\text{Var}(X_1+X_2+...+X_n)}\\\\\n&=\\sqrt{\\text{Var}(X_1)+\\text{Var}(X_2)+...+\\text{Var}(X_n)}\\\\\n&=\\sqrt{n\\sigma^2}=\\sqrt{n} \\sigma\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Basics</span>"
     ]
   }
 ]

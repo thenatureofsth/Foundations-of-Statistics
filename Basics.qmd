@@ -1,10 +1,6 @@
-# Introduction
+# Basics
 
-This is a book created from markdown and executable code.
-
-See @knuth84 for additional discussion of literate programming.
-
-# Descriptive Statistics
+## Descriptive Statistics
 
 population deviation
 
@@ -59,4 +55,28 @@ T=\frac{\bar{X}-\mu}{\frac{S}{\sqrt{n}}}=\frac{\bar{X}-\mu}{s.e}
 $$
 
 s.e is the standard error of the sample mean
+
+## Randomisation
+
+How can we use sampled data to inform us about the population from which the data are drawn?
+
+Suppose that $X_1,X_2,...,X_n$ represent a random sample from a distribution with mean $\mu$ , then
+
+$$
+E[X_1+X_2+...+X_n]=E[X_1]+E[X_2]+...+E[X_n]=n\mu.
+$$
+
+Since $X_1,X_2,...,X_n$ are independent (hence uncorrelated), we have
+
+$$
+\text{Var}(X_1+X_2+...+X_n)=\text{Var}(X_1)+\text{Var}(X_2)+...+\text{Var}(X_n)=n\sigma^2
+$$
+
+$$
+\begin{aligned}
+\text{sd}(X_1+X_2+...+X_n)&=\sqrt{\text{Var}(X_1+X_2+...+X_n)}\\
+&=\sqrt{\text{Var}(X_1)+\text{Var}(X_2)+...+\text{Var}(X_n)}\\
+&=\sqrt{n\sigma^2}=\sqrt{n} \sigma 
+\end{aligned}
+$$
 
