@@ -3,7 +3,7 @@
     "path": "~/Desktop/Foundations of Statistics/intro.qmd",
     "project_path": "intro.qmd",
     "type": "quarto_markdown",
-    "hash": "3438055671",
+    "hash": "1551321364",
     "contents": "",
     "dirty": false,
     "created": 1732312956578.0,
@@ -22,11 +22,11 @@
         "quartoPreviewFormat": "html"
     },
     "folds": "",
-    "lastKnownWriteTime": 1732324282,
+    "lastKnownWriteTime": 1732324507,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1732324282943,
+    "last_content_update": 1732324508000,
     "read_only": false,
     "read_only_alternatives": []
 }
