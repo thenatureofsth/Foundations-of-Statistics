@@ -6,7 +6,7 @@ See @knuth84 for additional discussion of literate programming.
 
 # Descriptive Statistics
 
-population deviation
+Population deviation
 
 $$
 \sigma=\sqrt{\frac{\sum_{i=1}^N (X_i-\mu)^2}{N}}
